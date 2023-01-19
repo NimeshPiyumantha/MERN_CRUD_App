@@ -35,7 +35,7 @@ router.get('/post/get', (req, res) => {
     });
 });
 
-//put posts
+//update posts
 router.put('/post/update/:id', (req, res) => {
     Posts.findByIdAndUpdate(
         req.params.id, {
@@ -52,6 +52,21 @@ router.put('/post/update/:id', (req, res) => {
             });
         }
     );
+});
+
+//delete posts
+router.delete('/post/delete/:id', (req, res) => {
+    Posts.findByIdAndRemove(req.params.id).exec((err, deletedPost) => {
+        if (err) return res.status(400).json({
+            message: "Delete Unsuccesfully.",
+            err
+        });
+
+        return res.json({
+            message: "Delete Succesfully.",
+            deletedPost
+        });
+    });
 });
 
 module.exports = router;
