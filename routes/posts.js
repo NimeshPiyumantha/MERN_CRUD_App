@@ -1,5 +1,4 @@
 const express = require('express');
-const { find } = require('../models/posts');
 const Posts = require('../models/posts');
 
 const router = express.Router();
