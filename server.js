@@ -1,7 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 const app = express();
+
+//import routes
+const postRoutes = require('./routes/posts');
+
+//app middleware
+app.use(bodyParser.json());
+
+app.use(postRoutes);
 
 const port = 8000;
 const DB_URL = 'mongodb+srv://root:1234@mernapp.bgfziqs.mongodb.net/mernCrud?retryWrites=true&w=majority'
