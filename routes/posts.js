@@ -35,4 +35,23 @@ router.get('/post/get', (req, res) => {
     });
 });
 
+//put posts
+router.put('/post/update/:id', (req, res) => {
+    Posts.findByIdAndUpdate(
+        req.params.id, {
+            $set: req.body
+        },
+        (err, posts) => {
+            if (err) {
+                return res.status(400).json({
+                    error: err
+                });
+            }
+            return res.status(200).json({
+                success: "Update Succesfully."
+            });
+        }
+    );
+});
+
 module.exports = router;
