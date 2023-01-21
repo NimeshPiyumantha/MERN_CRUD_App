@@ -28,15 +28,36 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                {this.state.posts.map(posts =>(
-                    <div>
-                        <p>{posts.name}</p>
-                        <p>{posts.state}</p>
-                        <p>{posts.salary}</p>
-
-                    </div>
-                ))}
-            </div>
+            <p>All Posts</p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {this.state.posts.map((posts, index) => (<tr>
+                    <th scope="row">{index + 1}</th>
+                    <td>{posts.name}</td>
+                    <td>{posts.state}</td>
+                    <td>{posts.salary}</td>
+                    <td>
+                        <a className="btn btn-warning" href="#">
+                            <i className="fas fa-edit"></i>&nbsp;Edit
+                        </a>
+                        &nbsp;
+                        <a className="btn btn-danger" href="#">
+                            <i className="far fa-trash-alt"></i>&nbsp;Delete
+                        </a>
+                    </td>
+                </tr>))}
+                </tbody>
+            </table>
+        </div>
         )
     }
 }
