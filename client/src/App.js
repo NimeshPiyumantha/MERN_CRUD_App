@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import axios from 'axios';
 
 export default class App extends Component {
@@ -15,24 +15,28 @@ export default class App extends Component {
     }
 
     retrievePosts() {
-        axios.get("http://localhost:8000/posts").then(res => {
+        axios.get("http://localhost:8000/post/get").then(res => {
             if (res.data.success) {
                 this.setState({
                     posts: res.data.existingPosts
                 });
-
                 console.log(this.state.posts)
             }
-
         });
     }
 
     render() {
-        return ( <
-            div >
+        return (
+            <div>
+                {this.state.posts.map(posts =>(
+                    <div>
+                        <p>{posts.name}</p>
+                        <p>{posts.state}</p>
+                        <p>{posts.salary}</p>
 
-            <
-            /div>
+                    </div>
+                ))}
+            </div>
         )
     }
 }
