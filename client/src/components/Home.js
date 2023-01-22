@@ -26,11 +26,9 @@ export default class Home extends Component {
     }
 
     render() {
-        return (
-            <div className="container">
-                <p>All Posts</p>
-                <table class="table">
-                    <thead>
+        return (<div className="container overflow-auto">
+                <table className="table table-secondary text-center table-striped table-bordered table-hover">
+                    <thead className="text-light table-dark text-center  table-bordered">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
@@ -43,11 +41,12 @@ export default class Home extends Component {
                     {this.state.posts.map((posts, index) => (<tr>
                         <th scope="row">{index + 1}</th>
                         <td>
-                            <a href={`/post/get/{posts.id}`} style={{textDecoration:'none'}}>
-                            {posts.name} </a> </td>
+                            <a href={`/post/get/{posts.id}`} style={{textDecoration: 'none'}}>
+                                {posts.name} </a></td>
                         <td>{posts.state}</td>
                         <td>{posts.salary}</td>
                         <td>
+                            &nbsp; &nbsp;
                             <a className="btn btn-warning" href="#">
                                 <i className="fas fa-edit"></i>&nbsp;Edit
                             </a>
@@ -60,9 +59,15 @@ export default class Home extends Component {
                     </tbody>
                 </table>
 
-                <button className="btn btn-success"><a href="/add" style={{textDecoration:'none',color:'white'}}>Create Post</a></button>
+                <button className="btn btn-success"><a href="/add" style={{textDecoration: 'none', color: 'white'}}>Create
+                    Post</a></button>
+                {/*&nbsp; &nbsp;*/}
+                {/*<button className="btn btn-warning"><a href="/edit" style={{textDecoration: 'none', color: 'black'}}><i*/}
+                {/*    className="fas fa-edit"></i>&nbsp;Edit</a></button>*/}
+                {/*&nbsp; &nbsp;*/}
+                {/*<button className="btn btn-danger"><a href="/Delete" style={{textDecoration: 'none', color: 'white'}}><i*/}
+                {/*    className="far fa-trash-alt"></i>&nbsp;Delete</a></button>*/}
 
-            </div>
-        )
+            </div>)
     }
 }
