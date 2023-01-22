@@ -28,42 +28,50 @@ router.get('/post/get', (req, res) => {
             });
         }
         return res.status(200).json({
-            success: true,
-            existingPosts: posts
+            success: true, existingPosts: posts
         });
     });
 });
 
 //update posts
 router.put('/post/update/:id', (req, res) => {
-    Posts.findByIdAndUpdate(
-        req.params.id, {
-            $set: req.body
-        },
-        (err, posts) => {
-            if (err) {
-                return res.status(400).json({
-                    error: err
-                });
-            }
-            return res.status(200).json({
-                success: "Update Succesfully."
+    Posts.findByIdAndUpdate(req.params.id, {
+        $set: req.body
+    }, (err, posts) => {
+        if (err) {
+            return res.status(400).json({
+                error: err
             });
         }
-    );
+        return res.status(200).json({
+            success: "Update Succesfully."
+        });
+    });
 });
 
 //delete posts
 router.delete('/post/delete/:id', (req, res) => {
     Posts.findByIdAndRemove(req.params.id).exec((err, deletedPost) => {
         if (err) return res.status(400).json({
-            message: "Delete Unsuccesfully.",
-            err
+            message: "Delete Unsuccesfully.", err
         });
 
         return res.json({
-            message: "Delete Succesfully.",
-            deletedPost
+            message: "Delete Succesfully.", deletedPost
+        });
+    });
+});
+
+//get a specific post
+router.get('/post/get/:id', (req, res) => {
+    let postId = req.params.id;
+
+    Posts.findById(postId, (err, post) => {
+        if (err) {
+            return res.status(400).json({success: false, err});
+        }
+        return res.status(200).json({
+            success: true, post
         });
     });
 });
