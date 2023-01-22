@@ -51,7 +51,7 @@ export default class Home extends Component {
                             <a className="btn btn-warning" href="#">
                                 <i className="fas fa-edit"></i>&nbsp;Edit
                             </a>
-                            &nbsp;
+                            &nbsp; &nbsp;
                             <a className="btn btn-danger" href="#">
                                 <i className="far fa-trash-alt"></i>&nbsp;Delete
                             </a>
