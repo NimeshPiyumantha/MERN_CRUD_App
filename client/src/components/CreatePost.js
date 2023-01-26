@@ -34,6 +34,7 @@ export default class CreatePost extends Component {
         console.log(data);
         axios.post("/post/save",data).then((res) =>{
             if(res.data.success){
+                alert("Save Successfully.");
                 this.setState(
                     {
                         name:name,
