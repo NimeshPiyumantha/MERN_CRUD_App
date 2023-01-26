@@ -6,13 +6,15 @@ export default class PostDetails extends Component {
         super(props);
 
         this.state = {
-            post: {}
+            post: []
         };
     }
 
     componentDidMount() {
-        // const id = this.props.match.params.id;
-        const id = '63c92ea9d1d2e2afeef47212';
+        const id = this.props.match.params.id;
+
+        // const id = '63c92e29d1d2e2afeef4720a';
+
         axios.get(`/post/get/${id}`).then((res) => {
             if (res.data.success) {
                 this.setState({

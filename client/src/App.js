@@ -14,8 +14,8 @@ export default class App extends Component {
                 <NavBar/>
                 <Routes>
                     <Route exact path="/" element ={<Home/>}/>
-                    <Route exact path="/add" element ={<CreatePost/>}/>
-                    <Route exact path="/edit/:id" element ={<EditPost/>}/>
+                    <Route exact path="/post/save" element ={<CreatePost/>}/>
+                    <Route exact path="/post/update/:id" element ={<EditPost/>}/>
                     <Route exact path="/post/get/:id" element ={<PostDetails/>}/>
                 </Routes>
             </BrowserRouter>
