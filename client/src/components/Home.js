@@ -42,7 +42,7 @@ export default class Home extends Component {
                         <tr key={index}>
                         <th scope="row">{index + 1}</th>
                         <td>
-                            <a href={`/post/get/${posts._id}`} style={{textDecoration: 'none'}}>
+                            <a href={`/post/get/{posts._id}`} style={{textDecoration: 'none'}}>
                                 {posts.name} </a></td>
                         <td>{posts.state}</td>
                         <td>{posts.salary}</td>

@@ -24,8 +24,21 @@ export default class PostDetails extends Component {
     }
 
     render() {
-        return (<div>
-                PostDetails
-            </div>);
+        const {name,state,salary} = this.state.post;
+        return (
+           <div style={{marginTop:'20px'}}>
+               <h4>{name}</h4>
+               <hr/>
+
+               <ul className="row">
+                   <dt className="col-sm-3">Salary</dt>
+                   <dd className="col-sm-9">{salary}</dd>
+
+                   <dt className="col-sm-3">State</dt>
+                   <dd className="col-sm-9">{state}</dd>
+               </ul>
+
+           </div>
+        );
     }
 }
