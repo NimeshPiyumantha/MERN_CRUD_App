@@ -12,14 +12,14 @@ export default class PostDetails extends Component {
 
     componentDidMount() {
         /*const id = this.props.match.params.id;*/
-        const { id } = this.props.match.params;
+        const {id} = this.props.match.params;
 
         // const id = '63c92e29d1d2e2afeef4720a';
 
         axios.get(`/post/get/${id}`).then((res) => {
             if (res.data.success) {
                 this.setState({
-                    post:res.data.post
+                    post: res.data.post
                 });
                 console.log(this.state.post);
             }
@@ -27,21 +27,19 @@ export default class PostDetails extends Component {
     }
 
     render() {
-        const {name,state,salary} = this.state.post;
-        return (
-           <div className="container overflow-auto" style={{marginTop:'20px'}}>
-               <h4>{name}</h4>
-               <hr/>
+        const {name, state, salary} = this.state.post;
+        return (<div className="container overflow-auto" style={{marginTop: '20px'}}>
+                <h4>{name}</h4>
+                <hr/>
 
-               <ul className="row">
-                   <dt className="col-sm-3">Salary</dt>
-                   <dd className="col-sm-9">{salary}</dd>
+                <ul className="row">
+                    <dt className="col-sm-3">Salary</dt>
+                    <dd className="col-sm-9">{salary}</dd>
 
-                   <dt className="col-sm-3">State</dt>
-                   <dd className="col-sm-9">{state}</dd>
-               </ul>
+                    <dt className="col-sm-3">State</dt>
+                    <dd className="col-sm-9">{state}</dd>
+                </ul>
 
-           </div>
-        );
+            </div>);
     }
 }

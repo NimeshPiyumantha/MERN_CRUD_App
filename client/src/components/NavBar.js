@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 
 export default class NavBar extends Component {
     render() {
-        return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        return (<nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">Navbar</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -21,7 +20,6 @@ export default class NavBar extends Component {
                     </div>
 
                 </div>
-            </nav>
-        );
+            </nav>);
     }
 }
