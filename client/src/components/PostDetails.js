@@ -6,13 +6,13 @@ export default class PostDetails extends Component {
         super(props);
 
         this.state = {
-            posts: []
+            post: {}
         };
     }
 
     componentDidMount() {
-        const id = this.props.match.params.id;
-
+        // const id = this.props.match.params.id;
+        const id = '63c92ea9d1d2e2afeef47212';
         axios.get(`/post/get/${id}`).then((res) => {
             if (res.data.success) {
                 this.setState({
@@ -26,7 +26,7 @@ export default class PostDetails extends Component {
     render() {
         const {name,state,salary} = this.state.post;
         return (
-           <div style={{marginTop:'20px'}}>
+           <div className="container overflow-auto" style={{marginTop:'20px'}}>
                <h4>{name}</h4>
                <hr/>
 

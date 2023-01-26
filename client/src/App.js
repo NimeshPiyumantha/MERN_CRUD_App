@@ -16,7 +16,7 @@ export default class App extends Component {
                     <Route exact path="/" element ={<Home/>}/>
                     <Route exact path="/add" element ={<CreatePost/>}/>
                     <Route exact path="/edit/:id" element ={<EditPost/>}/>
-                    <Route exact path="/post/:id" element ={<PostDetails/>}/>
+                    <Route exact path="/post/get/:id" element ={<PostDetails/>}/>
                 </Routes>
             </BrowserRouter>
 
