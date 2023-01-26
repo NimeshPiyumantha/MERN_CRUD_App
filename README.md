@@ -2,17 +2,34 @@
 
 This is a Learning Express Server & MongoDB Configuration with REST API Creation & Testing with Postman.
 
-## Only Back End
-
+## Back End
 * Express Server
 * MongoDB
 * Postman
 
+## Front End
+* React JS
+* Boostrap 5
 
 ## Front End Test (Postman)
 * 🔗 <a href="https://documenter.getpostman.com/view/21678240/2s8ZDX3Mvr" target="_blank">PostMan Page</a>
 
 ##
+
+## In the project directory, you can run:
+### `npm run dev`
+
+###  
+![alt text](https://github.com/NimeshPiyumantha/MERN_CRUD_App/blob/master/images/Screenshot%20(281).png)
+
+###  
+![alt text](https://github.com/NimeshPiyumantha/MERN_CRUD_App/blob/master/images/Screenshot%20(282).png)
+
+###  
+![alt text](https://github.com/NimeshPiyumantha/MERN_CRUD_App/blob/master/images/Screenshot%20(283).png)
+
+###  
+![alt text](https://github.com/NimeshPiyumantha/MERN_CRUD_App/blob/master/images/Screenshot%20(284).png)
 
 ###  
 ### Clone this repository ✅

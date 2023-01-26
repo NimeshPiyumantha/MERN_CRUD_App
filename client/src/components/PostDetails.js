@@ -12,9 +12,7 @@ export default class PostDetails extends Component {
 
     componentDidMount() {
         /*const id = this.props.match.params.id;*/
-        const {id} = this.props.match.params;
-
-        // const id = '63c92e29d1d2e2afeef4720a';
+        const id = '63d265d8e219aac685cd79bf';
 
         axios.get(`/post/get/${id}`).then((res) => {
             if (res.data.success) {
