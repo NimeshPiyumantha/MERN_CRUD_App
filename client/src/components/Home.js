@@ -60,7 +60,7 @@ export default class Home extends Component {
                     </tbody>
                 </table>
 
-                <button className="btn btn-success"><a href="/add" style={{textDecoration: 'none', color: 'white'}}>Create
+                <button className="btn btn-success"><a href="/post/save" style={{textDecoration: 'none', color: 'white'}}>Create
                     Post</a></button>
                 {/*&nbsp; &nbsp;*/}
                 {/*<button className="btn btn-warning"><a href="/edit" style={{textDecoration: 'none', color: 'black'}}><i*/}
