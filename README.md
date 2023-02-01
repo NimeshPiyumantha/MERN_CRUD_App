@@ -7,23 +7,26 @@ This is a Learning Express Server & MongoDB Configuration with REST API Creation
 * MongoDB
 * Postman 
 
-* npm i express nodemon cors mongoose body-parser
-* npm i concurrently
+## Back End packages
+* `npm i express nodemon cors mongoose body-parser`
+* `npm i concurrently`
 
 
 ## Front End
 * React JS
 * Boostrap 5 
 
-* npx create-react-app client 
-* npm i axios
-* npm i react-router-dom
+## Front End packages
+* `npx create-react-app client`
+* `npm i axios`
+* `npm i react-router-dom`
 
 
 ## Front End Test (Postman)
 * 🔗 <a href="https://documenter.getpostman.com/view/21678240/2s8ZDX3Mvr" target="_blank">PostMan Page</a>
 
 ## In the project directory, you can run:
+### `cd backend`
 ### `npm run dev`
 
 ###  
