@@ -5,11 +5,20 @@ This is a Learning Express Server & MongoDB Configuration with REST API Creation
 ## Back End
 * Express Server
 * MongoDB
-* Postman
+* Postman 
+
+* npm i express nodemon cors mongoose body-parser
+* npm i concurrently
+
 
 ## Front End
 * React JS
-* Boostrap 5
+* Boostrap 5 
+
+* npx create-react-app client 
+* npm i axios
+* npm i react-router-dom
+
 
 ## Front End Test (Postman)
 * 🔗 <a href="https://documenter.getpostman.com/view/21678240/2s8ZDX3Mvr" target="_blank">PostMan Page</a>
