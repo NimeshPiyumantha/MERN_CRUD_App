@@ -66,7 +66,6 @@ https://github.com/NimeshPiyumantha/MERN_CRUD_App.git
   <a href="mailto:nimeshpiyumantha11@gmail.com">
       <img width="20px" src="https://github.com/NimeshPiyumantha/red-alpha/blob/main/gmail.svg" />
   </a></p>
-
  </div>
 
 ##
