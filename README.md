@@ -51,7 +51,6 @@ This is a Learning Express Server & MongoDB Configuration with REST API Creation
 ![alt text](<https://github.com/NimeshPiyumantha/MERN_CRUD_App/blob/master/images/Screenshot%20(284).png>)
 
 ###
-
 ### Clone this repository ✅
 
 ```md
